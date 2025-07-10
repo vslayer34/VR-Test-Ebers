@@ -1,15 +1,11 @@
 using UnityEngine;
-using UnityEngine.Video;
 
-public class UIManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    public static UIManager Instance { get; private set; }
+    public static AudioManager Instance { get; private set; }
 
     [SerializeField]
-    private ResetButton _resetBtn;
-
-    [SerializeField]
-    private VideoPlayer _videoPlayer;
+    private AudioSource _victoryAudioSource;
 
 
 
@@ -30,18 +26,8 @@ public class UIManager : MonoBehaviour
 
     // Member Methods------------------------------------------------------------------------------
 
-    public void ShowResetButton()
+    public void PlayVictorySound()
     {
-        _resetBtn.gameObject.SetActive(true);
-    }
-
-    public void PlayVideo()
-    {
-        _videoPlayer.Play();
-    }
-
-    public void PauseVideo()
-    {
-        _videoPlayer.Pause();
+        _victoryAudioSource.Play();
     }
 }

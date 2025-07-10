@@ -6,5 +6,6 @@ public class TestSphere : MonoBehaviour, IThrowable
     public void ShowEndGame()
     {
         UIManager.Instance.ShowResetButton();
+        AudioManager.Instance.PlayVictorySound();
     }
 }
